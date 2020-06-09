@@ -4,13 +4,13 @@ block content
   div.col-12
     h1.crud-title #{title}
     form.col-6.crud-form(method='POST', action='/properties/edit/'+property._id)
-      .form-group.crud-style
+      .form-group
         label(for='editName') Name
         input#editName.form-control(name='name', type='text', value=property.name)
-      .form-group.crud-style
+      .form-group
         label(for='editImgSrc') Image
         input#editImgSrc.form-control(name='imgSrc', type='text', value=property.imgSrc)
-      .form-group.crud-style
+      .form-group
         label(for='editTextBrief') Description
         textarea#editTextBrief.form-control(name='textBrief', type='text', rows='4')=property.textBrief
         br

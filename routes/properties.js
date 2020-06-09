@@ -11,7 +11,7 @@ const Property = require("../models/property");
 // load new property form
 router.get("/add", function (req, res) {
   res.render("add_property", {
-    name: "Add Property",
+    title: "Add Property",
   });
 });
 //* no call to db so no async / await

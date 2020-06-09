@@ -1,16 +1,17 @@
 extends layout
 
 block content
-  h1 #{name}
-  form(method='POST', action='/add')
-    .form-group
-      label name:
-      input.form-control(name='name', type='text')
-    .form-group
-      label imgSrc:
-      input.form-control(name='imgSrc', type='text')
-    .form-group
-      label textBrief:
-      textarea.form-control(name='textBrief')
-    br
-    input.btn.btn-primary(type='submit', value='Submit')
+  div.col-12
+    h1.col-6.crud-title #{title}
+    form.col-6.crud-form(method='POST', action='/add')
+      .form-group
+        label(for='addName') Name
+        input#addName.form-control(name='name', type='text')
+      .form-group
+        label(for='addImgSrc') Image
+        input#addImgSrc.form-control(name='imgSrc', type='text')
+      .form-group
+        label(for='addTextBrief') Description
+        textarea#addTextBrief.form-control(name='textBrief', type='text', rows='4')
+        br
+        input.btn.btn-primary(type='submit', value='Submit')
