@@ -9,7 +9,6 @@ const path = require('path');
 const cookieParser = require('cookie-parser');
 const logger = require('morgan');
 const mongoose = require('mongoose');
-const bodyParser = require('body-parser');
 
 const indexRouter = require('./routes/index');
 const usersRouter = require('./routes/users');
@@ -34,12 +33,26 @@ const app = express();
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'pug');
+// removes deprecatation warning for all findById/findOne
+mongoose.set('useFindAndModify', false);
 
 app.use(logger('dev'));
+
+// body-parser not required - included by default now:
 app.use(express.json());
-app.use(express.urlencoded({ extended: false }));
+app.use(express.urlencoded({ extended: true }));
+
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
+
+//! IMPORTANT
+//* I couldn't get custom css or assets (images) to
+//* ...load without adding this:
+//* SEE: https://stackoverflow.com/questions/5924072/express-js-cant-get-my-static-files-why
+//* SEE: https://www.tutorialspoint.com/expressjs/expressjs_static_files.htm
+app.use('*/css', express.static('public/css'));
+app.use('*/js', express.static('public/js'));
+app.use('*/assets', express.static('public/assets'));
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
