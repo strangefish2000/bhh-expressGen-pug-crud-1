@@ -83,8 +83,8 @@ html(lang='en')
 						a.dropdown-toggle.admin-button(role='button', data-toggle='dropdown', href='http://www.brightonholidayhomes.co.uk/properties') Admin
 						.dropdown-menu.admin-dropdown
 							a.dropdown-item.admin-item(href='/add') Add Property
-							a.dropdown-item.admin-item.disabled(href='#') Edit Property
-							a.dropdown-item.admin-item.disabled(href='#') Delete Property
+							a.dropdown-item.admin-item(href='/properties/edit/:id') Edit Property
+							a.dropdown-item.admin-item(href='/properties/delete/:id') Delete Property
 				.col-2
 					a.golf-breaks(href='#')
 						img(src='./assets/midweek-golf-breaks.png', height='24', alt='golf breaks')

@@ -1,0 +1,7 @@
+extends layout
+
+block content
+  h1 #{title}
+  form(method='POST', action='/properties/delete/'+property._id)
+    br
+    input.btn.btn-primary(type='submit', value='Submit')

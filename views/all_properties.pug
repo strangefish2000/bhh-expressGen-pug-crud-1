@@ -1,0 +1,21 @@
+
+main.main.col-9
+    header.sleeps-large.col-12
+        h2 sleeps: 
+        h1 1/2
+        |
+        br
+        |
+        for property in properties
+            article.properties.col-4
+                .property-card.card
+                    a.card-link(href="/properties/"+property._id)
+                        img.property-card-image.card-img-top(src=`./${property.imgSrc}`, alt=`${property.name} photo`)
+                        .property-card-body.card-body
+                            .property-card-upper
+                                h4.property-card-title.card-title #{property.name}
+                                p.property-card-text.card-text #{property.textBrief}
+                            hr.property-card-line
+                            .property-card-lower
+                                h5.property-card-sleeps Sleeps: 
+                                h4.property-card-sleeps-number 2

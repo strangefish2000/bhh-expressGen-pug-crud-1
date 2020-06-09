@@ -1,0 +1,476 @@
+extends layout
+
+block content
+    include aside
+    main.main.col-9
+        .row
+            .indiv-property-name.col-9
+                h1 #{property.name}
+            .indiv-property-name.col-3
+                h2 sleeps: 
+                h1 2
+        hr.hr-line
+        // GALLERY
+        .row
+            .col-12
+                span.prop-label-1 GALLERY
+                span.just-scroll ...scroll through the pictures. Click to enlarge.
+                button.btn.btn-link.edit-delete(type='button')
+                    a(href='/properties/delete/'+property._id) Delete
+                button.btn.btn-link.edit-delete(type='button')
+                    a(href='/properties/edit/'+property._id) Edit
+
+        // CAROUSEL
+        #individualPropertyCarousel.carousel.slide(data-interval='3000', data-ride='carousel')
+            // Wrapper for carousel items
+            .carousel-inner
+                .carousel-item.active
+                    img(src='./assets/Brighton-Beach-House-slideshow.jpg', height='340px', alt='Beachside House')
+                    .carousel-caption.d-none.d-md-block
+                        p Lovely interior.
+                        .opacity
+                .carousel-item
+                    img(src='./assets/Casa-blanca-slideshow_1.jpg', height='340px', alt='Casa Blanca Apartment')
+                    .carousel-caption.d-none.d-md-block
+                        p Beautiful Brighton.
+                        .opacity
+                .carousel-item
+                    img(src='./assets/Driftwood-slideshow-02 (1).jpg', height='340px', alt='Driftwood House')
+                    .carousel-caption.d-none.d-md-block
+                        p Have a relaxing break.
+                        .opacity
+            // Carousel controls
+            a.carousel-control-prev(href='#individualPropertyCarousel', data-slide='prev')
+                span.carousel-control-prev-icon
+            a.carousel-control-next(href='#individualPropertyCarousel', data-slide='next')
+                span.carousel-control-next-icon
+        hr.hr-line
+        // FEATURES
+        .row
+            .col-12
+                span.prop-label-1 FEATURES
+        .row
+            .sleeps-block.col-3
+                ul.features-label-1
+                    li
+                        span Sleeps
+                        span.features-label-2 2
+                    li
+                        span Bedrooms
+                        span.features-label-2 1
+                    li
+                        span Batdrooms
+                        span.features-label-2 1
+            .beds-block.col-9
+                ul.beds
+                    li
+                        h4 DOUBLE BED
+                        span.bed-number 1
+                    li
+                        h4 SINGLE BED
+                        span.bed-number 0
+                    li
+                        h4 BUNK BED
+                        span.bed-number 0
+                    li
+                        h4 TRIPLE BUNK BED
+                        span.bed-number 0
+                    li
+                        h4 SOFA BED
+                        span.bed-number 0
+                    li
+                        h4 Z-BED
+                        span.bed-number 0
+                    li
+                        h4 CHAIR BED
+                        span.bed-number 0
+                    li
+                        h4 CUBE BED
+                        span.bed-number 0
+        hr.hr-line
+        // DETAILS TAB, PRICE LIST, QUICK EMAIL
+        .row
+            .details-tabs.col-6
+                span.extra-info
+                    | There is one bedroom which has a double bed. Please note there
+                    | is not room for a travel cot.
+                // TABS
+                // CONTENT - starts
+                #exTab1
+                    ul.top-bar.nav.nav-tabs
+                        li
+                            a.nav-link.details-tab.active(href='#a1', data-toggle='tab')
+                                | DETAILS
+                        li
+                            a.nav-link.additional-info-tab(href='#a2', data-toggle='tab') ADDITIONAL INFORMATION
+                        li
+                            a.nav-link.reviews-tab(href='#a3', data-toggle='tab') REVIEWS
+                    .tab-content
+                        #a1.tab-pane.active.details-tab
+                            p
+                                | The apartment forms part of redevelopment of a Victorian
+                                | red brick building in the heart of the very popular and
+                                | highly regarded Kemp Town village area of Brighton. Not
+                                | far from the Palace Pier and witd the beach at the end of
+                                | the road. It is an ideal location as you are close to
+                                | central Brighton but also there are a great selection of
+                                | independent shops and coffee shops, restaurants and gastro
+                                | pubs just around the corner. It is also not far from the
+                                | Royal Sussex Hospital so would suit someone who needs to
+                                | be in Brighton for hospital commitments.
+                            h5 Entrance
+                            p
+                                | there is Intercom door entry to the main front door. A
+                                | communal hallway witd one flight of stairs up to the main
+                                | front door of the apartment.
+                            h5 the Kitchen
+                            p
+                                | Inside the apartment there is a good size kitchen witd
+                                | fridge witd freezer compartment, microwave, cooker and
+                                | everytding you need to self cater. Big sash windows at the
+                                | front let light flood in.
+                            h5 the Sitting Room/Diner
+                            p
+                                | the sitting room/dining room has a lovely feel to it witd
+                                | big sash windows to the front tdat fill the room witd
+                                | light. there is a very attractive original feature
+                                | fireplace (non working) and high ceilings. A big comfy
+                                | sofa and armchair offer a great place to relax and watch
+                                | the large LCD tv witd Freeview and there is a dvd player
+                                | too. A modern vintage style dining table and lamps,
+                                | coupled witd modern pop art pictures create a slightly
+                                | retro but homely feel. A very comfortable place to relax
+                                | or work. the dining table is perfect for spreading out
+                                | paperwork and there is WiFi.
+                            h5 the Batdroom
+                            p
+                                | the batdroom is fairly small and has a walk in shower
+                                | cubicle.
+                            h5 the Bedroom
+                            p
+                                | the bedroom is at the back of the property and is a neat
+                                | room, simply furnished. there is a double bed, chest of
+                                | drawers, bedside tables and lamps and a hanging rail. the
+                                | mattress is a good quality memory foam mattress.
+                        #a2.tab-pane.additional-info-tab
+                            p All bed linen and towels are included in the price.
+                            p All utility bills are included in the price.
+                            p
+                                | there is no parking witd the property but metered parking
+                                | is available just at the end of the road. If you are here
+                                | longer term and require parking, please ask us as we may
+                                | be able to help witd a nearby parking space tdat we rent.
+                                | Please note tdis is not always possible as it may already
+                                | be allocated. If you do not need your car during your stay
+                                | we can advise you where you can leave your car and park
+                                | for free which is some distance away. As witd all our
+                                | properties, smoking is not permitted in the apartment.
+                                | there is WiFi.
+                        #a3.tab-pane.reviews-tab
+                            h3
+                // CONTENT - ends
+            // PRICE LIST
+            .price-list-outer.col-6
+                img.price-email(src='./assets/title-pricelist.png')
+                hr.hr-line
+                .row
+                    .col-6
+                        table
+                            tbody
+                                tr
+                                    td.prices-white Per Week
+                                    td.prices-yellow from £395
+                                    td.prices-yellow to £595
+                                tr
+                                    td.prices-white Midweek
+                                    td.prices-yellow N/A
+                                    td.prices-yellow N/A
+                                tr
+                                    td.prices-white Weekend
+                                    td.prices-yellow N/A
+                                    td.prices-yellow N/A
+                    .col-5
+                        p.para-right
+                            | The prices are an approximate guide for this property
+                            | according to the season or for special offers. Please call
+                            | the office for a specific quote for the dates you require.
+                .row
+                    .col-12
+                        // BOOK NOW & OPEN TODAY
+                        .yellow-telephone
+                            img.phone-yellow(height='42px', src='./assets/phone.png')
+                            span.book-now Book Now: 
+                            span.tel-yellow 01273 624459
+                        .open-today
+                            span.open OPEN TODAY
+                            span.open-times 9am-10pm
+                        // QUICK EMAIL
+                        img.price-email(src='./assets/title-quickemail.png')
+                        hr.hr-line
+                        span.simply-fill
+                            | Simply fill in this form and we'll email back a no
+                            | obligation quote.
+                        form.quick-email-form
+                            table
+                                tbody
+                                    tr
+                                        td
+                                            label(for='fname') Your name
+                                        td
+                                            input#fname(type='text', name='fname')
+                                    tr
+                                        td
+                                            label(for='femail') Your email
+                                        td
+                                            input#femail(type='text', name='femail')
+                                    tr
+                                        td
+                                            label(for='fphone') Your phone
+                                        td
+                                            input#fphone(type='text', name='fphone')
+                                    tr
+                                        td
+                                            label(for='fpeople') No. of people
+                                        td
+                                            select#fpeople(name='fpeople')
+                                                option(value='1') 1
+                                                option(value='2') 2
+                                                option(value='3') 3
+                                                option(value='4') 4
+                                                option(value='5') 5
+                                                option(value='6') 6
+                                                option(value='7') 7
+                                                option(value='8') 8
+                                                option(value='9') 9
+                                                option(value='10') 10
+                                                option(value='11') 11
+                                                option(value='12') 12
+                                                option(value='13') 13
+                                                option(value='14') 14
+                                                option(value='15') 15
+                                                option(value='16') 16
+                                                option(value='17') 17
+                                                option(value='18') 18
+                                                option(value='19') 19
+                                                option(value='20') 20
+                                                option(value='20+') 20+
+                                    tr
+                                        td
+                                            label(for='fdate-from') Date from
+                                        td
+                                            input#fdate-from(type='date', name='fdate-from')
+                                    tr
+                                        td
+                                            label(for='fdate-to') Date to
+                                        td
+                                            input#fdate-to(type='date', name='fdate-to')
+                                    tr
+                                        td
+                                            label(for='fpreference') Property preference
+                                        td
+                                            select#fpreference(name='fpreference')
+                                                option(value='All Properties', selected='selected') All Properties
+                                                option(value='beach-central') Beach Central
+                                                option(value='britannia-apartment') Britannia Apartment
+                                                option(value='britannia-apartment-3') Britannia Apartment 3
+                                                option(value='burlington-apartment') Burlington Apartment
+                                                option(value='farman-cottage') Farman Cottage
+                                                option(value='fourth-avenue') Fourth Avenue
+                                                option(value='grand-parade') Grand Parade
+                                                option(value='hamilton-apartment') Hamilton Apartment
+                                                option(value='kemp-town-apartment') Kemp Town Apartment
+                                                option(value='madeira-view') Madeira View
+                                                option(value='montpelier-street') Montpelier Street
+                                                option(value='mykonos-house') Mykonos House
+                                                option(value='nantucket-house') Nantucket House
+                                                option(value='sillwood-road') Sillwood Road
+                                                option(value='st-james-studio') St James’ Studio
+                                                option(value='the-edge') The Edge
+                                                option(value='the-french-apartment') The French Apartment
+                                                option(value='wilbury-apartment') Wilbury Apartment
+                                                option(value='wilbury-grove') Wilbury Grove
+                                                option(value='adelaide-apartment') Adelaide Apartment
+                                                option(value='adelaide-crescent') Adelaide Crescent
+                                                option(value='albert-mansions') Albert Mansions
+                                                option(value='anchor-lodge') Anchor Lodge
+                                                option(value='arthouse-central') Arthouse Central
+                                                option(value='asterel-apartment') Asterel Apartment
+                                                option(value='avalon-apartment') Avalon Apartment
+                                                option(value='avalon-apartment-2') Avalon Apartment 2
+                                                option(value='beach-view') Beach View
+                                                option(value='beachcomber-house') Beachcomber House
+                                                option(value='beachdown-house') Beachdown House
+                                                option(value='beachside-house') Beachside House
+                                                option(value='bedford-house-2') Bedford House 2
+                                                option(value='bedford-towers-2') Bedford Towers 2
+                                                option(value='bedford-towers-4') Bedford Towers 4
+                                                option(value='bedford-towers-5') Bedford Towers 5
+                                                option(value='belgrave-place') Belgrave Place
+                                                option(value='bloomsbury-cottage') Bloomsbury Cottage
+                                                option(value='bloomsbury-place') Bloomsbury Place
+                                                option(value='bluebell-house') Bluebell House
+                                                option(value='borough-apartment') Borough Apartment
+                                                option(value='borough-street') Borough Street
+                                                option(value='brighton-beach-house') Brighton Beach House
+                                                option(value='brighton-bedrock') Brighton Bedrock
+                                                option(value='brighton-belle-penthouse') Brighton Belle Penthouse
+                                                option(value='bristol-court') Bristol Court
+                                                option(value='britannia-apartment-2') Britannia Apartment 2
+                                                option(value='brunswick-apartment-1') Brunswick Apartment 1
+                                                option(value='brunswick-lookout') Brunswick Lookout
+                                                option(value='brunswick-place') Brunswick Place
+                                                option(value='brunswick-retreat') Brunswick Retreat
+                                                option(value='brunswick-seaview') Brunswick Seaview
+                                                option(value='brunswick-square') Brunswick Square
+                                                option(value='brunswick-square-east') Brunswick Square East
+                                                option(value='brunswick-square-west') Brunswick Square West
+                                                option(value='brunswick-terrace') Brunswick Terrace
+                                                option(value='buckingham-apartment') Buckingham Apartment
+                                                option(value='captain-smiths') Captain Smith’s
+                                                option(value='captains-lodge') Captain’s Lodge
+                                                option(value='casa-blanca') Casa Blanca
+                                                option(value='cavendish-apartment') Cavendish Apartment
+                                                option(value='charlotte-mews') Charlotte Mews
+                                                option(value='chesham-apartment') Chesham Apartment
+                                                option(value='chesham-road') Chesham Road
+                                                option(value='chesham-studio') Chesham Studio
+                                                option(value='church-place') Church Place
+                                                option(value='church-street-apartment') Church Street Apartment
+                                                option(value='church-street-cottage') Church Street Cottage
+                                                option(value='cliff-house') Cliff House
+                                                option(value='clifton-apartment') Clifton Apartment
+                                                option(value='college-road') College Road
+                                                option(value='college-terrace-apartment') College Terrace Apartment
+                                                option(value='collingwood-court') Collingwood Court
+                                                option(value='collingwood-court-3') Collingwood Court 3
+                                                option(value='dandelion-house') Dandelion House
+                                                option(value='dean-street') Dean Street
+                                                option(value='denmark-villas') Denmark Villas
+                                                option(value='devonshire-place-2') Devonshire Place 2
+                                                option(value='devonshire-place-3') Devonshire Place 3
+                                                option(value='east-street-central') East Street Central
+                                                option(value='eaton-apartment') Eaton Apartment
+                                                option(value='eaton-lodge') Eaton Lodge
+                                                option(value='eaton-place') Eaton Place
+                                                option(value='embankment-apartment') Embankment Apartment
+                                                option(value='embankment-apartment-2') Embankment Apartment 2
+                                                option(value='embassy-1') Embassy 1
+                                                option(value='gatsby-house') Gatsby House
+                                                option(value='glass-pavilion-apartment') Glass Pavilion Apartment
+                                                option(value='Hanover-Heights') Hanover Heights
+                                                option(value='heart-of-the-lanes') Heart of the Lanes
+                                                option(value='holland-road') Holland Road
+                                                option(value='kemp-house') Kemp House
+                                                option(value='kings-court-apartment') Kings Court Apartment
+                                                option(value='kings-road-seaview') Kings Road Seaview
+                                                option(value='kings-road-studio') Kings Road Studio
+                                                option(value='kingsway-apartment') Kingsway Apartment
+                                                option(value='laines-apartment') Laines Apartment
+                                                option(value='lansdowne-5') Lansdowne 5
+                                                option(value='lansdowne-place-1') Lansdowne Place 1
+                                                option(value='marine-gardens1') Marine Gardens
+                                                option(value='marine-parade-apartment') Marine Parade Apartment
+                                                option(value='marine-square') Marine Square
+                                                option(value='marine-square-2') Marine Square 2
+                                                option(value='marine-view2') Marine View
+                                                option(value='marine-villa') Marine Villa
+                                                option(value='marlborough-cottage') Marlborough Cottage
+                                                option(value='medina-villa') Medina Villa
+                                                option(value='merton-court') Merton Court
+                                                option(value='merton-court-2') Merton Court 2
+                                                option(value='millfield-cottage') Millfield Cottage
+                                                option(value='montpelier-apartment') Montpelier Apartment
+                                                option(value='neptune-apartment') Neptune Apartment
+                                                option(value='neptune-apartment-2') Neptune Apartment 2
+                                                option(value='new-burlington') New Burlington
+                                                option(value='north-laine-cottage') North Laine Cottage
+                                                option(value='nova-apartment') Nova Apartment
+                                                option(value='number-5') Number 5
+                                                option(value='octagon-apartment') Octagon Apartment
+                                                option(value='osmond-apartment') Osmond Apartment
+                                                option(value='palmeira-grande-apartment') Palmeira Grande Apartment
+                                                option(value='palmeira-mansions') Palmeira Mansions
+                                                option(value='palmeira-plaza') Palmeira Plaza
+                                                option(value='palmeira-retreat') Palmeira Retreat
+                                                option(value='pavilion-apartment') Pavilion Apartment
+                                                option(value='pavilion-house') Pavilion House
+                                                option(value='pavilion-mews') Pavilion Mews
+                                                option(value='pebble-beach') Pebble Beach
+                                                option(value='penthouse-apartment') Penthouse Apartment
+                                                option(value='pier-retreat') Pier Retreat
+                                                option(value='portland-mews') Portland Mews
+                                                option(value='portside-marina') Portside Marina
+                                                option(value='primrose-house') Primrose House
+                                                option(value='reef-knot') Reef Knot
+                                                option(value='regency-house') Regency House
+                                                option(value='rock-apartment') Rock Apartment
+                                                option(value='rock-place') Rock Place
+                                                option(value='rock-retreat') Rock Retreat
+                                                option(value='rock-street') Rock Street
+                                                option(value='rockpool-house') Rockpool House
+                                                option(value='saks-apartment') Saks Apartment
+                                                option(value='sea-breeze') Sea Breeze
+                                                option(value='sea-lanes-1') Sea Lanes 1
+                                                option(value='sea-lanes-2') Sea Lanes 2
+                                                option(value='seabank-central') Seabank Central
+                                                option(value='seadrift-cottage') Seadrift Cottage
+                                                option(value='seafront-apartment') Seafront Apartment
+                                                option(value='seascape-apartment') Seascape Apartment
+                                                option(value='seaside-hideaway') Seaside Hideaway
+                                                option(value='seaside-house') Seaside House
+                                                option(value='seaside-retreat') Seaside Retreat
+                                                option(value='seaview-apartment') Seaview Apartment
+                                                option(value='seven-dials-penthouse') Seven Dials Penthouse
+                                                option(value='sillwood-central') Sillwood Central
+                                                option(value='sillwood-court') Sillwood Court
+                                                option(value='sillwood-road-3') Sillwood Road 3
+                                                option(value='somerhill-apartment1') Somerhill Apartment
+                                                option(value='somerhill-apartment-2') Somerhill Apartment 2
+                                                option(value='south-lanes-villa') South Lanes Villa
+                                                option(value='sovereign-apartment') Sovereign Apartment
+                                                option(value='sparks-apartment') Sparks Apartment
+                                                option(value='st-georges-apartment-1') St Georges Apartment 1
+                                                option(value='st-georges-apartment-2') St Georges Apartment 2
+                                                option(value='st-james-apartment') St James’ Apartment
+                                                option(value='sudeley-apartment') Sudeley Apartment
+                                                option(value='sunshine-coast') Sunshine Coast
+                                                option(value='sussex-apartment') Sussex Apartment
+                                                option(value='sussex-square') Sussex Square
+                                                option(value='temple-street') Temple Street
+                                                option(value='the-balcony-apartment') The Balcony Apartment
+                                                option(value='the-beach-house') The Beach House
+                                                option(value='the-bedford') The Bedford
+                                                option(value='the-coach-house') The Coach House
+                                                option(value='the-continental') The Continental
+                                                option(value='the-grove') The Grove
+                                                option(value='the-grove-2') The Grove 2
+                                                option(value='the-hamptons') The Hamptons
+                                                option(value='the-lighthouse') The Lighthouse
+                                                option(value='the-water-factory') The Water Factory
+                                                option(value='the-white-house') The White House
+                                                option(value='upper-rock-apartment') Upper Rock Apartment
+                                                option(value='vegas-1') Vegas 1
+                                                option(value='vegas-2') Vegas 2
+                                                option(value='vegas-central') Vegas Central
+                                                option(value='victory-mews1') Victory Mews
+                                                option(value='victory-mews-2') Victory Mews 2
+                                                option(value='waterloo-street') Waterloo Street
+                                                option(value='west-pier-seaview') West Pier Seaview
+                                                option(value='wilbury-villa') Wilbury Villa
+                                                option(value='wonderland-cottage') Wonderland Cottage
+                                    tr
+                                        td
+                                            label(for='fbudget') What is your budget (£)
+                                        td
+                                            input#fbudget(type='text', value='£', name='fbudget')
+                                    tr
+                                        td
+                                            label(for='fadditional') Additional Information
+                                        td
+                                            input#fadditional(type='text', style='height: 100px', name='fadditional')
+                                    tr
+                                        td
+                                            label(for='fcode') Enter the code you see in the box
+                                        td
+                                            input#fcode(type='text', name='fcode')
+                            input.form-sub(type='submit', value='SEND')

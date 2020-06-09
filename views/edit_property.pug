@@ -1,0 +1,16 @@
+extends layout
+
+block content
+  h1 #{title}
+  form(method='POST', action='/properties/edit/'+property._id)
+    .form-group
+      label name:
+      input.form-control(name='name', type='text', value=property.name)
+    .form-group
+      label imgSrc:
+      input.form-control(name='imgSrc', type='text', value=property.imgSrc)
+    .form-group
+      label textBrief:
+      textarea.form-control(name='textBrief')= property.textBrief
+    br
+    input.btn.btn-primary(type='submit', value='Submit')

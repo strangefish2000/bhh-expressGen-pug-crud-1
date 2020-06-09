@@ -1,0 +1,847 @@
+body {
+    background-color: rgb(62,62,59);
+    font-family: Arial, Helvetica, sans-serif;
+    margin-left: -30px;
+}
+
+/* SOCIAL MEDIA ICONS */
+.social-fixed {
+    position: fixed;
+    margin: 134px 0px 0px 5px;
+}
+
+.social-list > li {
+    list-style-type: none;
+    padding-bottom: 8px;
+}
+
+/* HEADER */
+
+.header-blank {
+    height: 65px;
+}
+
+.logo {
+    margin-left: -15px;
+    margin-bottom: 27px;
+}
+
+.back-home {
+margin-left: 8px;
+}
+
+.numbers {
+    padding-left: 0px;
+}
+
+.sleeps {
+    margin-left: 0px;
+    padding-left: -0px;
+    margin-right: 0px;
+    color: rgb(165,166,163);
+    font-size: 22.4px;
+    font-weight: 400;
+}
+
+.range-small {
+    font-size: 22.4px;
+    font-weight: 700;
+    padding: 0px;
+    margin-right: 15px;
+}
+
+.range-small > a {
+    color: rgb(255,255,255);
+}
+
+.range-small > a:hover {
+        color: rgb(217,206,35);
+        text-decoration: none;
+}
+
+.range-large {
+    font-size: 22.4px;
+    font-weight: 700;
+    padding-left: 0px;
+    margin-right: 35px;
+}
+
+.range-large > a {
+    color: rgb(255,255,255);
+}
+
+.landlords {
+    margin-right: -15px;
+}
+
+.lower-blank {
+    height: 5px;
+}
+
+/* NAVBAR */
+
+.nav-block {
+    background-color: rgb(55,55,52);
+}
+
+.quick-access {
+    position: absolute;
+    z-index: 1;
+    margin-left: -15px;
+    background-color: rgb(217,206,35);
+    color: rgb(55,55,52);
+    font-size: 11.2px;
+    font-weight: 600;
+    height: 50px;
+    width: 120px;
+    padding-top: 16px;
+    padding-left: 5px;
+}
+
+.navbar {
+    height: 46px;
+}
+
+.nav-item {
+    font-size: 14px;
+    font-weight: 300;
+    text-align: left;
+    padding-right: 19px;
+}
+
+.nav-item > a {
+    color: rgb(217,206,35);
+}
+
+.nav-item > a:hover {
+    color: rgb(255,255,255);
+}
+
+/* ADMIN DROPDOWN 
+
+can clicking on a property also load a dropdown-menu on the main menu, specific to that page?
+
+
+! LATER: I'd like to have 
+*/
+.admin-dropdown {
+  color: rgb(217,206,35);
+  background-color: rgb(55,55,52);
+  position: absolute;
+  left: 600px;
+  padding: 2px 0px 2px 10px;
+  font-size: 14px;
+}
+
+.admin-button {
+  color: rgb(217,206,35);
+  font-size: 14px;
+}
+
+.admin-button:hover {
+  color: rgb(255,255,255);
+}
+
+.admin-item {
+  color: rgb(217,206,35);
+  background-color: rgb(55,55,52);
+  margin: 0px;
+  padding: 0px;
+}
+
+.admin-item:hover {
+  color: rgb(255,255,255);
+  background-color: rgb(55,55,52);
+}
+
+.golf-breaks {
+    position: absolute;
+    height: 24px;
+    top: 10px;
+    right: 100px;
+
+}
+
+.marina-apartments {
+    position: absolute;
+    height: 24px;
+    top: 10px;
+    right: 15px;
+}
+
+/* ASIDE */
+.aside {
+    background-color: rgb(76,76,73);
+    padding-top: 6px;
+}
+
+.section-aside {
+    width: 100%;
+    padding-top: 10px;
+}
+
+
+
+.section-aside > h2 {
+    font-size: 24px;
+    color: rgb(217,206,35);
+}
+
+.section-aside > h3 {
+    font-size: 24px;
+    color: rgb(255,255,255);
+    padding-top: 10px;
+    margin-bottom: 4px;
+}
+
+.section-aside > p {
+    font-size: 12px;
+    color: rgb(165,166,163);
+    font-weight: 300;
+    line-height: 180%;
+}
+
+.section-aside > p > a {
+     color: rgb(217,206,35);
+}
+
+.news-pic {
+    padding-bottom: 10px;
+}
+
+.section-aside > h4 {
+    font-size: 14.4px;
+    color: rgb(255,255,255);
+    font-weight: 700;
+    padding-top: 8px;
+}
+
+.offers-pic {
+    float: left;
+    padding-right: 10px;
+    padding-bottom: 2px;
+}
+
+
+
+/* MAIN */
+.main {
+    background-color: rgb(76,76,73);
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+.sleeps-large> h2, h1 {
+    display: inline-block;
+}
+
+.sleeps-large> h2 {
+    font-size: 64px;
+    font-weight: 400;
+    letter-spacing: -0.64px;
+    color: rgb(165,166,163);
+}
+
+.sleeps-large > h1 {
+    font-size: 64px;
+    font-weight: 700;
+    letter-spacing: -0.64px;
+    color: rgb(255,255,255);
+}
+
+.properties {
+  display: inline-block;
+}
+
+.property-card {
+    border-radius: 0%;
+    background-color: rgb(62,62,59);
+    margin: 10px 0px 10px 0px;
+}
+
+.property-card-image {
+    border-top: solid 3px rgb(62,62,59);
+    border-left: solid 5px rgb(62,62,59);
+    border-right: solid 5px rgb(62,62,59);
+}
+
+.property-card-body {
+        padding: 6px;
+        padding-bottom: 0px;
+}
+
+.property-card-title {
+        color: rgb(217,206,35);
+        font-size: 16px;
+        margin-left: 0px;
+}
+
+.property-card-text {
+        color: rgb(255,255,255);
+        font-size: 11.52px;
+        font-weight: 300;
+        padding-bottom: 0px;
+}
+
+.property-card-line {
+        border-top: solid 2px rgb(76,76,73);
+        margin-top: 10px;
+        margin-bottom: 0px;
+}
+
+.property-card-lower {
+            border: 1px;
+            margin-top: 0px;
+            padding-bottom: 0px;
+}
+
+.property-card-sleeps {
+    display: inline-block;
+    color: rgb(255,255,255);
+    font-size: 15.2px;
+    margin-bottom: 0px;
+}
+
+.property-card-sleeps-number {
+    display: inline-block;
+        color: rgb(217,206,35);
+        font-size: 16px;
+        font-weight: 700;
+        margin-bottom: 0px;
+}
+
+
+/* FOOTER */
+.footer {
+    margin-bottom: 15px;
+    background-color: rgb(55,55,52);
+    color: rgb(111,112,107);
+}
+.footer-list {
+    list-style-type: none;
+    font-size: 11.52px;
+    font-weight: 400;
+    padding-top: 15px;
+}
+
+
+
+.footer-list > li {
+    padding-top: 4px;
+}
+
+.footer-logo {
+    display: block;
+    padding-top: 20px;
+    
+}
+
+.footer-link {
+    font-size: 11.52px;
+    font-weight: 700;
+    color: rgb(111,112,107);
+}
+
+.footer-link:hover{
+    color: rgb(217,206,35);
+}
+
+.copyright {
+
+    text-align: center;
+    margin-bottom: 60px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 11.2px;
+    font-weight: 400;
+    color: rgb(111,112,107);
+}
+
+/* ALL CSS FOR INDIVIDUAL PROPERTY PAGE
+(property.pug)
+*/
+
+/* ------- INDIVIDUAL PROPERTIES ------- */
+/*  Property name and sleeps */
+.indiv-property-name {
+  display: inline;
+}
+
+.indiv-property-name > h1 {
+  display: inline;
+  color: rgb(255, 255, 255);
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 3.4em;
+  font-weight: bold;
+  letter-spacing: -0.03em;
+  margin: 0px 0px 0px 0px;
+}
+
+.indiv-property-name > h2 {
+  display: inline;
+  color: rgb(165, 166, 163);
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 3.4em;
+  font-weight: normal;
+  letter-spacing: -0.04em;
+  margin: 0px 0px 10px -25px;
+}
+
+.hr-line {
+  background-color: rgb(111, 112, 107);
+  margin-top: 6px;
+  margin-bottom: 6px;
+}
+
+/* GALLERY */
+.prop-label-1 {
+  color: rgb(217, 206, 35);
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 23px;
+  font-weight: normal;
+  margin: 0px 0px 5px 0px;
+  padding: 10px 0 5px 0;
+}
+
+.just-scroll {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 23px;
+  font-weight: normal;
+  color: #a5a6a3;
+  margin: 0px 0px 10px 0px;
+  padding: 10px 0 5px 0;
+}
+
+/* EDIT & DELETE BUTTONS */
+.edit-delete {
+  float: right;
+  margin-left: 0px;
+}
+
+/* CAROUSEL */
+.carousel {
+  margin-top: 25px;
+  margin: 25px;
+}
+
+.carousel-caption {
+  z-index: 0;
+}
+
+.carousel-caption > p {
+  color: rgb(255, 255, 255);
+  font-size: 27.2px;
+  position: absolute;
+  left: 140px;
+  z-index: 2;
+  font-weight: 500;
+  text-align: center;
+}
+
+.opacity {
+  display: block;
+  position: absolute;
+  left: -168px;
+  bottom: -20px;
+  width: 1150px;
+  height: 60px;
+  border: solid 1px rgb(76, 76, 73);
+  background-color: rgb(76, 76, 73);
+  z-index: 1;
+  opacity: 0.7;
+}
+
+.carousel-control-prev-icon {
+  position: absolute;
+  top: 290px;
+  left: 10px;
+  background-image: url(.././assets/arrow-left.png);
+  height: 40px;
+  width: 30px;
+  line-height: 70px;
+  z-index: 3;
+}
+
+.carousel-control-next-icon {
+  position: absolute;
+  top: 290px;
+  right: 10px;
+  background-image: url(.././assets/arrow-right.png);
+  height: 40px;
+  width: 30px;
+  line-height: 70px;
+  z-index: 3;
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+  opacity: 1;
+}
+
+/* FEATURES */
+.sleeps-block {
+  padding: 0px;
+  margin-left: 15px;
+}
+
+.features-label-1 > li {
+  list-style-type: none;
+  border-bottom: 1px solid #5d5e5b;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 19px;
+  font-weight: normal;
+  color: #a5a6a3;
+  padding: 1px 15px 1px 0;
+  margin: 5px 0px 5px -40px;
+}
+
+.features-label-2 {
+  color: rgb(255, 255, 255);
+  float: right;
+}
+
+.beds-block {
+  margin: 5px 0px 5px -15px;
+}
+
+.beds {
+  padding: 4px 8px 0px 35px;
+  margin-right: 0px;
+}
+
+.beds li {
+  display: inline-block;
+  list-style: none;
+  width: 62px;
+  margin: 0px 7px 7px 0px;
+}
+
+.beds li > h4 {
+  text-align: left;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 0.6em;
+  height: 40px;
+  letter-spacing: -0.01em;
+  font-weight: normal;
+  color: #ffffff;
+  padding: 5px 6px;
+  margin: 0px;
+  background-color: #3e3e3b;
+}
+
+.bed-number {
+  background-color: #d9ce24;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #ffffff;
+  font-weight: bold;
+  display: block;
+  font-size: 2em;
+  text-align: center;
+  padding: 3px 0;
+}
+
+/* DETAILS TABS - PRICE LIST - QUICK EMAIL */
+/* DETAILS TABS */
+.details-tabs {
+  border-right: solid 1px rgb(111, 112, 107);
+  margin-top: 20px;
+}
+
+.extra-info {
+  font-family: "aktiv-grotesk", sans-serif;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 0.8em;
+  color: #ffffff;
+  margin: 0px;
+  line-height: 1.6em;
+  letter-spacing: 0em;
+  text-align: left;
+  text-indent: 40%;
+}
+
+/* BELOW IS FROM TAB PRACTICE*/
+.top-bar {
+  background-color: rgb(62, 62, 59);
+  margin-top: 15px;
+  padding-top: 2px;
+  padding-bottom: 2px;
+  border-bottom: none;
+}
+
+/* tab content */
+#exTab1 .tab-content {
+  background-color: rgb(93, 94, 91);
+  font-family: "aktiv-grotesk", sans-serif;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 0.75em;
+  color: white;
+  margin: 0px 0px 0px 0px;
+  padding: 0px 3px 0px 3px;
+  line-height: 1.7em;
+  letter-spacing: 0em;
+  text-align: left;
+}
+
+#exTab1 .tab-content h5 {
+  color: rgb(243, 208, 11);
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 500;
+  padding: 0px;
+  margin: 0px;
+}
+
+#exTab1 .tab-pane {
+  padding: 15px 12px;
+}
+
+#exTab1 {
+  margin-bottom: 20px;
+}
+
+.nav-tabs > li > a.details-tab {
+  color: rgb(165, 165, 164);
+  font-family: "aktiv-grotesk", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 0.75em;
+  margin-right: 40px;
+  letter-spacing: 0.01em;
+  border: none;
+  margin-right: 0px;
+  margin-bottom: 0px;
+  padding-top: 2px;
+  padding-bottom: 2px;
+}
+.nav-tabs > li > a.details-tab.active {
+  color: rgb(243, 208, 11);
+  border: none;
+  background-color: rgb(62, 62, 59);
+}
+.nav-tabs > li > a.additional-info-tab {
+  color: rgb(165, 165, 164);
+  font-family: "aktiv-grotesk", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 0.75em;
+  margin-right: 40px;
+  letter-spacing: 0.01em;
+  border: none;
+  margin-right: 0px;
+  margin-bottom: 0px;
+  padding-top: 2px;
+  padding-bottom: 2px;
+}
+.nav-tabs > li > a.additional-info-tab.active {
+  color: rgb(243, 208, 11);
+  border: none;
+  background-color: rgb(62, 62, 59);
+}
+.nav-tabs > li > a.reviews-tab {
+  color: rgb(165, 165, 164);
+  font-family: "aktiv-grotesk", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 0.75em;
+  margin-right: 40px;
+  letter-spacing: 0.01em;
+  border: none;
+  margin-right: 0px;
+  margin-bottom: 0px;
+  padding-top: 2px;
+  padding-bottom: 2px;
+}
+.nav-tabs > li > a.reviews-tab.active {
+  color: rgb(243, 208, 11);
+  border: none;
+  background-color: rgb(62, 62, 59);
+}
+
+/* PRICE-EMAIL */
+.price-list-outer {
+  padding-left: 20px;
+}
+
+.price-email {
+  margin: 22px 0px 10px 0px;
+}
+
+/* PRICE LIST, BOOK NOW, OPEN TODAY, QUICK EMAIL */
+.prices-white {
+  border-bottom-color: rgb(93, 94, 91);
+  border-bottom-style: solid;
+  border-bottom-width: 1px;
+  border-collapse: separate;
+  color: rgb(255, 255, 255);
+  display: table-cell;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 11px;
+  font-weight: 400;
+  height: 15px;
+  letter-spacing: normal;
+  padding-bottom: 5px;
+  padding-left: 0px;
+  padding-right: 0px;
+  padding-top: 5px;
+  vertical-align: middle;
+  width: 80px;
+}
+
+.prices-yellow {
+  border-bottom-color: rgb(93, 94, 91);
+  border-bottom-style: solid;
+  border-bottom-width: 1px;
+  border-collapse: separate;
+  color: rgb(217, 206, 36);
+  display: table-cell;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 10px;
+  font-weight: 400;
+  height: 15px;
+  letter-spacing: normal;
+  padding-bottom: 5px;
+  padding-left: 0px;
+  padding-right: 0px;
+  padding-top: 5px;
+  vertical-align: middle;
+  width: 90px;
+  text-align: middle;
+}
+
+.para-right {
+  color: rgb(165, 166, 163);
+  display: block;
+  float: left;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 10.4px;
+  font-weight: 400;
+  height: 100px;
+  line-height: 16px;
+  padding-bottom: 0px;
+  padding-left: 0px;
+  padding-right: 0px;
+  padding-top: 0px;
+  width: 150px;
+}
+
+.yellow-telephone {
+  background-color: rgb(217, 206, 36);
+  font-family: aktiv-grotesk, sans-serif;
+  font-style: normal;
+  padding: 8px 0 13px 10px;
+  text-align: left;
+  width: 360px;
+}
+
+.book-now {
+  color: rgb(255, 255, 255);
+  font-family: aktiv-grotesk, sans-serif;
+  font-size: 26px;
+  font-style: normal;
+  font-weight: 300;
+  height: 40px;
+  line-height: 40px;
+  padding-bottom: 0px;
+  padding-left: 0px;
+  padding-right: 5px;
+  padding-top: 0px;
+  text-align: center;
+}
+
+.tel-yellow {
+  color: rgb(75, 74, 74);
+  display: inline;
+  font-family: aktiv-grotesk, sans-serif;
+  font-size: 26px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 40px;
+  text-align: center;
+  text-decoration-color: rgb(75, 74, 74);
+  text-decoration-line: none;
+  text-decoration-style: solid;
+}
+
+.open-today {
+  background-color: rgb(243, 243, 243);
+  color: rgb(75, 74, 74);
+  font-family: aktiv-grotesk, sans-serif;
+  font-style: normal;
+  height: 60px;
+  width: 360px;
+  margin: 0px 0px 0px 0px;
+  padding: 10px 0 15px 5px;
+}
+
+.open {
+  color: rgb(75, 74, 74);
+  font-family: aktiv-grotesk, sans-serif;
+  font-size: 25px;
+  font-style: normal;
+  font-weight: 500;
+  padding: 0px 10px 0 40px;
+}
+
+.open-times {
+  color: rgb(165, 166, 163);
+  font-family: aktiv-grotesk, sans-serif;
+  font-size: 25px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 25px;
+}
+
+/* FORM */
+.simply-fill {
+  color: rgb(255, 255, 255);
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 12.8px;
+}
+
+.quick-email-form {
+  margin-top: 7px;
+}
+
+.quick-email-form > table > tbody > tr > td > label {
+  border-collapse:separate;
+  color:rgb(255, 255, 255);
+  display:table-cell;
+  font-family:Arial, Helvetica, sans-serif;
+  font-size:10px;
+  font-weight:400;
+  letter-spacing:normal;
+  padding-bottom:0px;
+  padding-left:0px;
+  padding-right:0px;
+  padding-top:5px;
+  width:70px;
+  line-height: 110%;
+} 
+
+.quick-email-form > table > tbody > tr > td > input {
+  background-color: rgb(93, 94, 91);
+  border: none;
+  color: rgb(255, 255, 255);
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 11px;
+  width: 174%;
+  padding-left: 7px;
+}
+
+.quick-email-form > table > tbody > tr > td > select {
+  background-color: rgb(93, 94, 91);
+  border: none;
+  color: rgb(255, 255, 255);
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 11px;
+  padding-left: 5px;
+}
+
+.form-sub {
+  color: rgb(255, 255, 255);
+  background-color: rgb(217, 206, 36);
+  border: none;
+  width: 22%;
+  margin-top: 10px;
+}
