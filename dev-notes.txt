@@ -1,0 +1,9 @@
+CHANGED PACKAGE.JSON for NODEMON:
+original was:
+  "serverstart": "DEBUG=express-locallibrary-tutorial:* npm run devstart"
+I changed it to:
+  DEBUG=bhh-expressgen-pug-crud-1:* & npm start
+
+  --------------------------------------
+  
+  
