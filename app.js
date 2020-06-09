@@ -15,6 +15,7 @@ let Property = require('./models/property');
 
 const indexRouter = require('./routes/index');
 const usersRouter = require('./routes/users');
+const propertiesRouter = require('./routes/properties');
 
 //mongoose setup
 mongoose.connect('mongodb://localhost:27017/bhh', {
@@ -41,7 +42,7 @@ mongoose.set('useFindAndModify', false);
 
 app.use(logger('dev'));
 
-// body-parser not required - included by default now:
+// npm body-parser not required - included by default now:
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
@@ -57,8 +58,11 @@ app.use('*/css', express.static('public/css'));
 app.use('*/js', express.static('public/js'));
 app.use('*/assets', express.static('public/assets'));
 
-app.use('/', indexRouter);
-app.use('/users', usersRouter);
+//todo: include commented-out routes:
+//app.use('/', indexRouter);
+//app.use('/users', usersRouter);
+app.use('/', propertiesRouter);
+
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {
