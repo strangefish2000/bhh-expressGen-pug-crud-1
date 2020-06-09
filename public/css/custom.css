@@ -845,3 +845,14 @@ can clicking on a property also load a dropdown-menu on the main menu, specific 
   width: 22%;
   margin-top: 10px;
 }
+
+/* CRUD forms */
+.crud-title {
+  margin: 20px 0px 20px 20px;
+  color: rgb(165, 166, 163);
+}
+
+.crud-form {
+  color: rgb(165, 166, 163);
+  margin: 0px 0px 20px 20px;
+}

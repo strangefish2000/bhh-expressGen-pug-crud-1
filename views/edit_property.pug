@@ -1,16 +1,19 @@
 extends layout
 
 block content
-  h1 #{title}
-  form(method='POST', action='/properties/edit/'+property._id)
-    .form-group
-      label name:
-      input.form-control(name='name', type='text', value=property.name)
-    .form-group
-      label imgSrc:
-      input.form-control(name='imgSrc', type='text', value=property.imgSrc)
-    .form-group
-      label textBrief:
-      textarea.form-control(name='textBrief')= property.textBrief
-    br
-    input.btn.btn-primary(type='submit', value='Submit')
+  div.col-12
+    h1.crud-title #{title}
+    form.col-6.crud-form(method='POST', action='/properties/edit/'+property._id)
+      .form-group.crud-style
+        label(for='editName') Name
+        input#editName.form-control(name='name', type='text', value=property.name)
+      .form-group.crud-style
+        label(for='editImgSrc') Image
+        input#editImgSrc.form-control(name='imgSrc', type='text', value=property.imgSrc)
+      .form-group.crud-style
+        label(for='editTextBrief') Description
+        textarea#editTextBrief.form-control(name='textBrief', type='text', rows='4')=property.textBrief
+        br
+        input.btn.btn-primary(type='submit', value='Submit')
+
+
