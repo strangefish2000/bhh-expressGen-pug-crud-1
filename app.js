@@ -19,7 +19,7 @@ const usersRouter = require('./routes/users');
 const propertiesRouter = require('./routes/properties');
 
 // mongoose setup
-mongoose.connect('mongodb://localhost:27017/bhh', {
+mongoose.connect('mongodb+srv://paul:paul3040@cluster0-gvhli.mongodb.net/<dbname>?retryWrites=true&w=majority', {
   useNewUrlParser: true,
   useUnifiedTopology: true
 });

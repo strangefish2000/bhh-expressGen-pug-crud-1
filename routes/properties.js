@@ -14,7 +14,6 @@ router.get("/add", propertiesController.addPropertyForm);
 router.post("/add", propertiesController.addPropertySubmit);
 
 //?.... DELETE SINGLE PROPERTY ........
-
 // load
 router.get("/properties/delete/:id", propertiesController.deletePropertyForm);
 
@@ -25,7 +24,7 @@ router.post("/properties/delete/:id", propertiesController.deletePropertySubmit)
 // load 
 router.get("/properties/edit/:id", propertiesController.editPropertyForm);
 
-// submit e
+// submit
 router.post("/properties/edit/:id", propertiesController.editPropertySubmit);
 
 //?..... FIND ALL PROPERTIES ........
