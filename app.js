@@ -13,11 +13,12 @@ const mongoose = require('mongoose');
 // Property model
 const Property = require('./models/property');
 
+// routes
 const indexRouter = require('./routes/index');
 const usersRouter = require('./routes/users');
 const propertiesRouter = require('./routes/properties');
 
-//mongoose setup
+// mongoose setup
 mongoose.connect('mongodb://localhost:27017/bhh', {
   useNewUrlParser: true,
   useUnifiedTopology: true
@@ -69,7 +70,7 @@ app.use(function (req, res, next) {
   next(createError(404));
 });
 
-// error handler
+// error handler (using default express)
 app.use(function (err, req, res, next) {
   // set locals, only providing error in development
   res.locals.message = err.message;

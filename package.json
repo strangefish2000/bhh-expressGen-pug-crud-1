@@ -8,7 +8,6 @@
     "serverstart": "DEBUG=bhh-expressgen-pug-crud-1:* & npm start"
   },
   "dependencies": {
-    "body-parser": "^1.19.0",
     "clean-css": "^4.2.3",
     "cookie-parser": "~1.4.4",
     "debug": "~2.6.9",

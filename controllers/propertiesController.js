@@ -4,7 +4,7 @@
 const Property = require("../models/property");
 
 //?........ ADD NEW PROPERTY ........
-// load new property form
+// load
 exports.addPropertyForm = function (req, res) {
     res.render("add_property", {
         title: "Add Property",
@@ -12,7 +12,7 @@ exports.addPropertyForm = function (req, res) {
 };
 //* no call to db so no async / await
 
-// submit new property
+// submit
 exports.addPropertySubmit = async function (req, res) {
     try {
         let property = await new Property();
@@ -28,8 +28,7 @@ exports.addPropertySubmit = async function (req, res) {
 };
 
 // //?.... DELETE SINGLE PROPERTY ........
-
-// load delete form
+// load
 exports.deletePropertyForm = async (req, res) => {
     try {
         let property = await Property.findById(req.params.id);
@@ -42,7 +41,7 @@ exports.deletePropertyForm = async (req, res) => {
     }
 };
 
-// submit delete form
+// submit
 exports.deletePropertySubmit = async (req, res) => {
     try {
         let property = await Property.findByIdAndDelete(req.params.id);
@@ -54,7 +53,7 @@ exports.deletePropertySubmit = async (req, res) => {
 };
 
 //?......... EDIT PROPERTY ..........
-// load edit form
+// load
 exports.editPropertyForm = async (req, res) => {
     try {
         let property = await Property.findById(req.params.id);
@@ -67,7 +66,7 @@ exports.editPropertyForm = async (req, res) => {
     }
 };
 
-// submit edit form
+// submit
 exports.editPropertySubmit = async (req, res) => {
     try {
         let property = await Property.findByIdAndUpdate(req.params.id, req.body, {
@@ -83,7 +82,6 @@ exports.editPropertySubmit = async (req, res) => {
 
 
 //?..... FIND ALL PROPERTIES ........
-// find all properties
 exports.allProperties = async (req, res) => {
     try {
         const properties = await Property.find({});
@@ -96,7 +94,6 @@ exports.allProperties = async (req, res) => {
 };
 
 //?.... FIND SINGLE PROPERTY ........
-// find single property
 exports.singleProperty = async (req, res) => {
     try {
         const property = await Property.findById(req.params.id);

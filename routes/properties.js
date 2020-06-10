@@ -1,5 +1,4 @@
 //* ROUTER:
-// error handling using default express error handler.
 
 const express = require("express");
 const router = express.Router();
@@ -8,33 +7,31 @@ const router = express.Router();
 const propertiesController = require('../controllers/propertiesController')
 
 //?........ ADD NEW PROPERTY ........
-// load new property form
+// load
 router.get("/add", propertiesController.addPropertyForm);
 
-// submit new property
+// submit
 router.post("/add", propertiesController.addPropertySubmit);
 
 //?.... DELETE SINGLE PROPERTY ........
 
-// load delete form
+// load
 router.get("/properties/delete/:id", propertiesController.deletePropertyForm);
 
-// submit delete form
+// submit 
 router.post("/properties/delete/:id", propertiesController.deletePropertySubmit);
 
 //?......... EDIT PROPERTY ..........
-// load edit form
+// load 
 router.get("/properties/edit/:id", propertiesController.editPropertyForm);
 
-// submit edit form
+// submit e
 router.post("/properties/edit/:id", propertiesController.editPropertySubmit);
 
 //?..... FIND ALL PROPERTIES ........
-// find all properties
 router.get("/", propertiesController.allProperties);
 
 //?.... FIND SINGLE PROPERTY ........
-// find single property
 router.get("/properties/:id", propertiesController.singleProperty);
 
 module.exports = router;
