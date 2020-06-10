@@ -19,7 +19,9 @@ const usersRouter = require('./routes/users');
 const propertiesRouter = require('./routes/properties');
 
 // mongoose setup
-mongoose.connect('mongodb+srv://paul:paul3040@cluster0-gvhli.mongodb.net/<dbname>?retryWrites=true&w=majority', {
+const dev_db_url = 'mongodb+srv://paul:paul3040@cluster0-gvhli.mongodb.net/<dbname>?retryWrites=true&w=majority';
+const mongoDB = process.env.MONGODB_URL || dev_db_url;
+mongoose.connect(mongoDB, {
   useNewUrlParser: true,
   useUnifiedTopology: true
 });
