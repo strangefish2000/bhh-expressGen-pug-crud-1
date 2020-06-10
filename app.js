@@ -3,6 +3,24 @@
 !    localhost:3000
 ! on Heroku my repo is heroku-bhh
 ! to push code from Github to Heroku repo: git push heroku-bhh master
+
+todo: THURSDAY - try to upload a default express-generator app. Also try to build my ap as non-0express-gen
+
+2020-06-10T17:18:59.000000+00:00 app[api]: Build started by user strangefish2000@gmail.com
+2020-06-10T17:19:18.460397+00:00 app[api]: Deploy a36e8011 by user strangefish2000@gmail.com
+2020-06-10T17:19:18.460397+00:00 app[api]: Release v7 created by user strangefish2000@gmail.com
+2020-06-10T17:19:19.000000+00:00 app[api]: Build succeeded
+2020-06-10T17:19:19.066162+00:00 heroku[web.1]: State changed from crashed to starting
+2020-06-10T17:19:22.904513+00:00 heroku[web.1]: Starting process with command `node app.js`
+2020-06-10T17:19:27.546058+00:00 app[web.1]: Connected to MongoDB
+? 2020-06-10T17:20:23.223493+00:00 heroku[web.1]: Error R10 (Boot timeout) -> Web process failed to bind to $PORT within 60 seconds of launch
+2020-06-10T17:20:23.242683+00:00 heroku[web.1]: Stopping process with SIGKILL
+2020-06-10T17:20:23.316997+00:00 heroku[web.1]: Process exited with status 137
+2020-06-10T17:20:23.355298+00:00 heroku[web.1]: State changed from starting to crashed
+
+?  ...see line 16: I still think this is a port issue.
+?  https://devcenter.heroku.com/articles/preparing-a-codebase-for-heroku-deployment#4-listen-on-the-correct-port
+
 */
 
 const createError = require('http-errors');
