@@ -6,9 +6,7 @@
   },
   "private": true,
   "scripts": {
-    "start": "node ./bin/www",
-    "devstart": "nodemon ./bin/www",
-    "serverstart": "DEBUG=bhh-expressgen-pug-crud-1:* & npm start"
+    "start": "node ./bin/www"
   },
   "dependencies": {
     "clean-css": "^4.2.3",
@@ -20,8 +18,5 @@
     "morgan": "~1.9.1",
     "path": "^0.12.7",
     "pug": "2.0.0-beta11"
-  },
-  "devDependencies": {
-    "nodemon": "^2.0.4"
   }
 }
