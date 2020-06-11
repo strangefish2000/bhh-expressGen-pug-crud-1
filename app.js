@@ -72,7 +72,7 @@ app.use('*/js', express.static('public/js'));
 app.use('*/assets', express.static('public/assets'));
 
 //todo: include commented-out routes:
-//app.use('/', indexRouter);
+app.use('/', indexRouter);
 //app.use('/users', usersRouter);
 app.use('/', propertiesRouter);
 
