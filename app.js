@@ -71,7 +71,7 @@ app.use('*/assets', express.static('public/assets'));
 //todo: sort routing out. Is problem async?
 app.use('/', indexRouter);
 //app.use('/users', usersRouter);
-app.use('/', propertiesRouter);
+app.use('/properties', propertiesRouter);
 
 
 // catch 404 and forward to error handler
