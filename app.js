@@ -25,12 +25,7 @@ const propertiesRouter = require('./routes/properties');
 
 const app = express();
 
-// listen on correct port for Heroku
-let port = process.env.PORT;
-if (port == null || port == "") {
-  port = 8000;
-}
-app.listen(port);
+
 
 // mongoose setup for production
 const dev_db_url = 'mongodb+srv://paul:paul3040@cluster0-gvhli.mongodb.net/<dbname>?retryWrites=true&w=majority';
@@ -98,4 +93,11 @@ app.use(function (err, req, res, next) {
   res.render('error');
 });
 
-module.exports = app;
+// listen on correct port for Heroku
+let port = process.env.PORT;
+if (port == null || port == "") {
+  port = 8000;
+}
+app.listen(port);
+
+// module.exports = app;
