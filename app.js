@@ -13,12 +13,6 @@ const cookieParser = require('cookie-parser');
 const logger = require('morgan');
 const mongoose = require('mongoose');
 
-// Property model
-// const Property = require('./models/property');
-
-// routes
-const indexRouter = require('./routes/index');
-//const usersRouter = require('./routes/users');
 const propertiesRouter = require('./routes/properties');
 
 const app = express();
@@ -40,8 +34,6 @@ db.once('open', function () {
 db.on('error', function (err) {
   console.error(err);
 });
-
-
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
@@ -67,9 +59,7 @@ app.use('*/css', express.static('public/css'));
 app.use('*/js', express.static('public/js'));
 app.use('*/assets', express.static('public/assets'));
 
-//todo: sort routing out. Is problem async?
-//app.use('/', indexRouter);
-//app.use('/users', usersRouter);
+// router setup
 app.use('/', propertiesRouter);
 
 
