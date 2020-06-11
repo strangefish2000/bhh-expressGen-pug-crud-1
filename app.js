@@ -70,7 +70,7 @@ app.use('*/assets', express.static('public/assets'));
 
 app.use('/', indexRouter);
 //app.use('/users', usersRouter);
-app.use('/properties', propertiesRouter);
+app.use('/', propertiesRouter);
 
 
 // catch 404 and forward to error handler
