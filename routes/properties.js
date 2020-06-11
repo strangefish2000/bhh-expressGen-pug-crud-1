@@ -15,10 +15,10 @@ router.post("/add", propertiesController.addPropertySubmit);
 
 //?.... DELETE SINGLE PROPERTY ........
 // load
-router.get("/properties/delete/:id", propertiesController.deletePropertyForm);
+router.get("/delete/:id", propertiesController.deletePropertyForm);
 
 // submit 
-router.post("/properties/delete/:id", propertiesController.deletePropertySubmit);
+router.post("/delete/:id", propertiesController.deletePropertySubmit);
 
 //?......... EDIT PROPERTY ..........
 // load 
