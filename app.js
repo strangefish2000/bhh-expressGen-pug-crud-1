@@ -1,10 +1,9 @@
 /*
+* ONLINE AT: https://shielded-caverns-95309.herokuapp.com/
 !    npm run devstart
 !    localhost:3000
 ! on Heroku my repo is heroku-bhh
 ! to push code from Github to Heroku repo: git push heroku-bhh master
-
-?  https://devcenter.heroku.com/articles/preparing-a-codebase-for-heroku-deployment#4-listen-on-the-correct-port
 
 */
 
@@ -16,7 +15,7 @@ const logger = require('morgan');
 const mongoose = require('mongoose');
 
 // Property model
-const Property = require('./models/property');
+// const Property = require('./models/property');
 
 // routes
 const indexRouter = require('./routes/index');
@@ -24,8 +23,6 @@ const usersRouter = require('./routes/users');
 const propertiesRouter = require('./routes/properties');
 
 const app = express();
-
-
 
 // mongoose setup for production
 const dev_db_url = 'mongodb+srv://paul:paul3040@cluster0-gvhli.mongodb.net/<dbname>?retryWrites=true&w=majority';
@@ -71,10 +68,9 @@ app.use('*/css', express.static('public/css'));
 app.use('*/js', express.static('public/js'));
 app.use('*/assets', express.static('public/assets'));
 
-//todo: include commented-out routes:
 app.use('/', indexRouter);
 //app.use('/users', usersRouter);
-app.use('/', propertiesRouter);
+app.use('/properties', propertiesRouter);
 
 
 // catch 404 and forward to error handler
@@ -100,4 +96,3 @@ if (port == null || port == "") {
 }
 app.listen(port);
 
-// module.exports = app;
