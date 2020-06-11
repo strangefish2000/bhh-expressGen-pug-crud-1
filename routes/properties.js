@@ -28,7 +28,7 @@ router.get("/properties/edit/:id", propertiesController.editPropertyForm);
 router.post("/properties/edit/:id", propertiesController.editPropertySubmit);
 
 //?..... FIND ALL PROPERTIES ........
-router.get("/", propertiesController.allProperties);
+router.get("/properties", propertiesController.allProperties);
 
 //?.... FIND SINGLE PROPERTY ........
 router.get("/properties/:id", propertiesController.singleProperty);
