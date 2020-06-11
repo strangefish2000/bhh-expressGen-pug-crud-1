@@ -18,7 +18,7 @@ const mongoose = require('mongoose');
 // const Property = require('./models/property');
 
 // routes
-//const indexRouter = require('./routes/index');
+const indexRouter = require('./routes/index');
 //const usersRouter = require('./routes/users');
 const propertiesRouter = require('./routes/properties');
 
@@ -69,7 +69,7 @@ app.use('*/js', express.static('public/js'));
 app.use('*/assets', express.static('public/assets'));
 
 //todo: sort routing out. Is problem async?
-//app.use('/', indexRouter);
+app.use('/', indexRouter);
 //app.use('/users', usersRouter);
 app.use('/', propertiesRouter);
 
