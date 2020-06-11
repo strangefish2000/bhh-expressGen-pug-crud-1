@@ -11,7 +11,7 @@ const propertiesController = require('../controllers/propertiesController')
 router.get("/add", propertiesController.addPropertyForm);
 
 // submit
-router.post("/add", propertiesController.addPropertySubmit);
+router.post("/properties/add", propertiesController.addPropertySubmit);
 
 //?.... DELETE SINGLE PROPERTY ........
 // load
