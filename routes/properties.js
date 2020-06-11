@@ -22,15 +22,15 @@ router.post("/properties/delete/:id", propertiesController.deletePropertySubmit)
 
 //?......... EDIT PROPERTY ..........
 // load 
-router.get("/properties/edit/:id", propertiesController.editPropertyForm);
+router.get("/edit/:id", propertiesController.editPropertyForm);
 
 // submit
-router.post("/properties/edit/:id", propertiesController.editPropertySubmit);
+router.post("/edit/:id", propertiesController.editPropertySubmit);
 
 //?..... FIND ALL PROPERTIES ........
-router.get("/properties", propertiesController.allProperties);
+router.get("/", propertiesController.allProperties);
 
 //?.... FIND SINGLE PROPERTY ........
-router.get("/properties/:id", propertiesController.singleProperty);
+router.get("/:id", propertiesController.singleProperty);
 
 module.exports = router;
