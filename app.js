@@ -58,6 +58,13 @@ db.on('error', function (err) {
 
 const app = express();
 
+// listen on correct port for Heroku
+let port = process.env.PORT;
+if (port == null || port == "") {
+  port = 8000;
+}
+app.listen(port);
+
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'pug');
